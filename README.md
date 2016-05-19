@@ -1,5 +1,7 @@
 # swap-exposer.py
 
+[[resized-8187.jpg]]
+
 This tool is currently under development. At this point it is in the proof of concept stage. The goal of this tool is to aid in the discovery of vim, emacs, and nano swap/temp files that are left on public facing websites. 
 
 # Backstory
