@@ -1,3 +1,5 @@
+# https://github.com/iaorana/swap-exposer
+
 import sys
 import re
 import urllib2
@@ -19,6 +21,8 @@ def main(argv):
 
     printurls(hits)
     headrequests(hits, context)
+
+    print('Operation completed.')
 
 def headrequests(hits, context):
     print('HEAD requests.')
@@ -51,7 +55,7 @@ def processhead(line, context):
 def printurls(hits):
     for line in hits:
         print(line)
-    print(str(len(hits)) + ' unique files found:')
+    print(str(len(hits)) + ' unique files found.')
 
 def getResults(domain, archive_url):
     opener = urllib2.build_opener()
@@ -91,12 +95,3 @@ def reduceLinks(urllink):
 
 if __name__ == '__main__':
     main(sys.argv)
-
-# TODO add known interesting file list for files that archive.org didn't index.
-# TODO add ascii colors to be uber leet.
-# TODO json output switch?
-# TODO test known files in each directory
-# TODO rate limiting outgoing conenctions?
-# TODO redirect detection
-# TODO configurable timeout for connections?
-# TODO add search engine scraping
