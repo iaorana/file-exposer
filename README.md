@@ -4,11 +4,11 @@ This tool is currently under development. At this point it is in the proof of co
 
 # Backstory
 
-This idea was a hybrid of two different tools and ideas that I wanted to try out. The first tool that inspired me was orphan-hunter. It unqiuely uses the wayback machine archive to discover orphan files. The second tool I borrowed an idea from is CMSploit. This tool searches for a fixed set of known configuration files related to CMS websites. 
+This idea was a hybrid of two different tools and ideas that I wanted to try out. The first tool that inspired me was orphan-hunter. It uniquely uses the wayback machine archive to discover orphan files. The second tool I borrowed an idea from is CMSploit. This tool searches for a fixed set of known configuration files related to CMS websites. 
 
 # What does it do?
 
-This tool will do a search query to the wayback machine (www.archive.org) for a requested domain. The response will include every URL that their robots have indexed. This tool then takes the response and filters out pages that are not php, asp, cfm, or cfml. These remaining pages are stored in a set to remove duplicates. It will then do HEAD requests for swap/temp filenames based on the scraped URL set. Some sites will respond with HTTP 200 for any given file, which is a problem I had to address. When the program detects a valid swap file it will make a second HEAD request for a incorrect file name to evaluate if it also gets a HTTP 200 code. HEAD was chosen over GET as to not tax the website as much when you're making many requests. 
+This tool will do a search query to the wayback machine (www.archive.org) for a requested domain. The response will include every URL that their robots have indexed. This tool then takes the response and filters out pages that are not php, asp, cfm, or cfml. These remaining pages are stored in a set to remove duplicates. It will then do HEAD requests for swap/temp file names based on the scraped URL set. Some sites will respond with HTTP 200 for any given file, which is a problem I had to address. When the program detects a valid swap file it will make a second HEAD request for a incorrect file name to evaluate if it also gets a HTTP 200 code. HEAD was chosen over GET as to not tax the website as much when you're making many requests. 
 
 # Sample output
 
@@ -55,4 +55,4 @@ While this tool's main purpose was to locate swap/temp files for URLs, it might 
 
 - Adding support for a connection timeout configuration option. This would be good for slow servers. 
 
-- I could also see benifit in using search engine resposnes to find more files that the wayback machine isn't aware of. ex: site: domain.com.
+- I could also see benefit in using search engine responses to find more files that the wayback machine isn't aware of. ex: site: domain.com.
