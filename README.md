@@ -1,4 +1,4 @@
-# swap-exposer.py
+# file-exposer.py
 
 ![](resized-8187.jpg?raw=true)
 
@@ -15,7 +15,7 @@ This tool will do a search query to the wayback machine (www.archive.org) for a 
 # Sample output
 
 ```
-user@user:~/swap-exposer$ python swap-exposer.py website.com
+user@user:~/file-exposer$ python file-exposer.py website.com
 Search query requested for website.com.
 Search response received.
 Parsing HTML.
